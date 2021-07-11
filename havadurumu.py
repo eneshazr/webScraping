@@ -1,3 +1,6 @@
+# https://yazilimfuryasi.com/selenium-ile-hava-durumu-botu/
+
+
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
