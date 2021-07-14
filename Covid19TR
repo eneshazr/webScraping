@@ -1,3 +1,8 @@
+# instagram.com/yazilimfuryasi
+# yazilimfuryasi.com
+# https://yazilimfuryasi.com/selenium-ile-web-scraping--covid19tr/
+
+
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import csv
