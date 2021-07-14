@@ -1,5 +1,6 @@
 # instagram.com/yazilimfuryasi
 # yazilimfuryasi.com
+# https://yazilimfuryasi.com/beautifulsoup-web-scraping/
 
 import requests
 from bs4 import BeautifulSoup
