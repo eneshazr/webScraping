@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-from beautifultable import BeautifulTable
 import csv
 
 url = "https://www.kitapyurdu.com/index.php?route=product/best_sellers&list_id=1&filter_in_stock=1&filter_in_stock=1&limit=25"
@@ -20,11 +19,9 @@ author = soup.find_all("div", {"class":"author compact ellipsis"})
 publisher = soup.find_all("div", {"class":"publisher"})
 list = soup.find_all("div", {"class":"name ellipsis"})
 
-table = BeautifulTable()
 file = open("Desktop/kitap.csv","w", newline= "", encoding='utf-8')
 writer = csv.writer(file)
 writer.writerow(["ID","Kitap Adı", "Yazar", "Yayıncı", "Bağlantı URL", "Fiyat"])
-table.columns.header = ["ID", "Kitap Adı", "Yazar", "Yayıncı", "Bağlantı URL", "Fiyat"]
 
 for i in pricenew:
     price = i.find("span", {"class":"value"})
@@ -42,7 +39,6 @@ for i in list:
     title = i.find("span").text.strip()
     link = i.find("a").get("href")
 
-    table.rows.append([s,title, yazar[s2], yayın[s2], link, fiyat[s2]])
     writer.writerow([s, title, yazar[s2], yayın[s2], link, fiyat[s2]])
     s2 += 1
     s += 1
