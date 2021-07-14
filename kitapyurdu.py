@@ -1,3 +1,8 @@
+# instagram.com/yazilimfuryasi
+# yazilimfuryasi.com
+# https://yazilimfuryasi.com/beautifulsoup-ile-web-scraping--kitapyurdu-cok-satanlar-listesi/
+
+
 import requests
 from bs4 import BeautifulSoup
 import csv
